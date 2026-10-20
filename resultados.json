@@ -1,0 +1,146 @@
+{
+  "empresa": "Conecta Telecom",
+  "kpis": {
+    "clientes": 2000,
+    "taxa_churn": 0.418,
+    "principal_fator": "Contrato mensal",
+    "principal_fator_or": 78.45242506831809
+  },
+  "churn_por_contrato": {
+    "contratos": [
+      "Mensal",
+      "Anual",
+      "Dois Anos"
+    ],
+    "clientes": [
+      1186,
+      533,
+      281
+    ],
+    "cancelaram": [
+      788,
+      37,
+      11
+    ],
+    "taxa": [
+      0.6644,
+      0.0694,
+      0.0391
+    ]
+  },
+  "fidelidade_hist": {
+    "faixas": [
+      0,
+      6,
+      12,
+      18,
+      24,
+      30,
+      36,
+      42,
+      48,
+      54,
+      60,
+      66,
+      72
+    ],
+    "nao": [
+      71,
+      65,
+      90,
+      76,
+      75,
+      100,
+      100,
+      113,
+      100,
+      108,
+      132,
+      134
+    ],
+    "sim": [
+      88,
+      94,
+      95,
+      85,
+      94,
+      72,
+      70,
+      44,
+      60,
+      45,
+      48,
+      41
+    ]
+  },
+  "modelo": {
+    "n_observacoes": 2000,
+    "pseudo_r2": 0.4335837766782934,
+    "referencias": {
+      "Tipo_Contrato": "Anual",
+      "Servico_Internet": "DSL"
+    },
+    "variaveis": [
+      {
+        "variavel": "Fidelidade_Meses",
+        "coef": -0.050919540400131996,
+        "odds_ratio": 0.9503551326500355,
+        "ic_inferior": 0.9436984534439488,
+        "ic_superior": 0.957058766874318,
+        "p_valor": 9.390266974399862e-46
+      },
+      {
+        "variavel": "Fatura_Mensal",
+        "coef": 0.025855920555253563,
+        "odds_ratio": 1.0261930844918015,
+        "ic_inferior": 1.019835166224443,
+        "ic_superior": 1.0325906396789617,
+        "p_valor": 3.5193431143767597e-16
+      },
+      {
+        "variavel": "Tipo_Contrato_Dois Anos",
+        "coef": -0.8657298469320573,
+        "odds_ratio": 0.4207443615582639,
+        "ic_inferior": 0.20461907633713367,
+        "ic_superior": 0.8651481619015841,
+        "p_valor": 0.01858240297527572
+      },
+      {
+        "variavel": "Tipo_Contrato_Mensal",
+        "coef": 4.362492390980656,
+        "odds_ratio": 78.45242506831809,
+        "ic_inferior": 50.51017206444653,
+        "ic_superior": 121.85234671636243,
+        "p_valor": 5.379268700315499e-84
+      },
+      {
+        "variavel": "Servico_Internet_Fibra Óptica",
+        "coef": 1.1356700910956818,
+        "odds_ratio": 3.113259011242195,
+        "ic_inferior": 2.3621589637313267,
+        "ic_superior": 4.103187727793897,
+        "p_valor": 7.505165596399547e-16
+      },
+      {
+        "variavel": "Servico_Internet_Não",
+        "coef": -0.04356674441787104,
+        "odds_ratio": 0.9573686529450395,
+        "ic_inferior": 0.6148081603634153,
+        "ic_superior": 1.4907979378478329,
+        "p_valor": 0.8471114947155471
+      }
+    ]
+  },
+  "perfil_alto_risco": {
+    "mediana_fatura": 71.20964400579888,
+    "clientes": 31,
+    "taxa_churn": 1.0,
+    "cliente_tipico": {
+      "fidelidade_meses": 6,
+      "fatura_mensal": 90.0,
+      "contrato": "Mensal",
+      "internet": "Fibra Óptica"
+    },
+    "prob_prevista": 0.9709335356072931
+  }
+}
